@@ -15,13 +15,14 @@
 <body>
 
   <main class="main">
-    <div class="quest-count"></div>
     <div class="container">
       <div class="main__inner">
-        <div class="first-block hide">
+        <div class="total-price"></div>
+        <div class="first-block ">
           <h1 class="main__title title">Cтоимость разработки сайта</h1>
           <p class="main__descr">Расскажите больше о сайте, который вам нужен, чтобы рассчитать примерную стоимость
-            разработки. Если нужа помощь - напишите мне в <a href="https://t.me/abdyl_aziz" class="main__link">Телеграм
+            разработки. Если нужа помощь или хотите узнать точную стоимость работы - напишите мне в <a
+              href="https://t.me/abdyl_aziz" class="main__link">Телеграм
               <svg enable-background="new 0 0 24 24" height="512" viewBox="0 0 24 24" width="512"
                 xmlns="http://www.w3.org/2000/svg">
                 <circle cx="12" cy="12" fill="#039be5" r="12" />
@@ -34,27 +35,50 @@
           <h2 class="second-block__quest title">Какой тип сайта вам нужен?</h2>
           <div class="second-block__radio-block">
             <div class="second-block__input-block">
-              <input type="radio" name="site" id="landing" checked>
+              <input type="radio" name="site" id="landing" checked value="landing-block">
               <label for="landing">Одностраничный сайт (Landing Page)</label>
             </div>
             <div class="second-block__input-block">
-              <input type="radio" name="site" id="multipage">
+              <input type="radio" name="site" id="multipage" value="multiple-block">
               <label for="multipage">Многостраничный сайт </label>
             </div>
             <div class="second-block__input-block">
-              <input type="radio" name="site" id="magazine">
+              <input type="radio" name="site" id="magazine" value="magazine-block">
               <label for="magazine">Интернет магазин</label>
             </div>
           </div>
           <button class="btn second-btn">Далее <span class="next-span">➤ᐅ</span> </button>
         </div>
-        <div class="landing-block">
+        <div class="landing-block hide" id="landing-block">
           <h2 class="landing-block__title title">Укажите количество блоков на вашем сайте</h2>
           <div class="landing-block__counter counter">
-            <button class="counter__btn btn" id="counter-minus">-</button>
-            <input type="number" name="number" id="counter-number" value="1" min="1"> 
-            <button class="counter__btn btn" id="counter-plus">+</button>
+            <button class="counter__btn btn counter-minus">-</button>
+            <input type="number" name="number" value="1" min="1" class="counter-number landing-number">
+            <button class="counter__btn btn counter-plus">+</button>
+            <button class="btn landing-btn">Узнать стоимость <span class="next-span">➤ᐅ</span> </button>
           </div>
+        </div>
+        <div class="multiple-block hide" id="multiple-block">
+          <h2 class="title">Укажите количество страниц</h2>
+          <div class="counter">
+            <input type="number" name="number" value="1" min="1" class="counter-number">
+          </div>
+          <h2 class="title">Укажите среднее кол-во блоков на вашем сайте</h2>
+          <div class="counter">
+            <input type="number" name="number" value="1" min="1" class="counter-number">
+          </div>
+          <button class="btn multiple-btn">Далее <span class="next-span">➤ᐅ</span> </button>
+        </div>
+        <div class="magazine-block hide" id="magazine-block">
+          <h2 class="title">Укажите количество страниц</h2>
+          <div class="counter">
+            <input type="number" name="number" value="1" min="1" class="counter-number">
+          </div>
+          <h2 class="title">Укажите среднее кол-во блоков на вашем сайте</h2>
+          <div class="counter">
+            <input type="number" name="number" value="1" min="1" class="counter-number">
+          </div>
+          <button class="btn magazine-btn">Далее <span class="next-span">➤ᐅ</span> </button>
         </div>
       </div>
     </div>
