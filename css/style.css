@@ -104,7 +104,7 @@ section {
   --btn-bg: #ff9900;
   --btn-bgHover: #b86f02;
 }
-hmtl {
+html {
   font-size: 10px;
 }
 body {
@@ -125,7 +125,7 @@ body {
   border: none;
   cursor: pointer;
   color: var(--white);
-  font-size: 1.3rem;
+  font-size: 2.4rem;
   text-transform: uppercase;
   padding: 15px 30px;
   background: var(--btn-bg);
@@ -136,11 +136,16 @@ body {
 }
 
 .title{
-  font-size: 2.4rem;
+  font-size: 3.2rem;
   font-weight: 700;
   text-transform: uppercase;
   margin-bottom: 3rem;
   margin-top: 2rem;
+}
+
+.next-span{
+  font-size: 2.4rem;
+  transition: all .25s ease;
 }
 
 @media(hover: hover){
@@ -157,6 +162,10 @@ body {
   }
   .second__input-block label:hover{
     color: var(--btn-bgHover);
+  }
+
+  #counter-number:active{
+    background: var(--btn-bg);
   }
 }
 
@@ -181,6 +190,7 @@ body {
   margin: 0 auto;
   max-width: 720px;
   margin-bottom: 5rem;
+  font-size: 2.4rem;
 }
 .main__link {
   text-decoration: none;
@@ -204,10 +214,6 @@ body {
   height: 24px;
 }
 
-.next-span{
-  font-size: 1.5rem;
-  transition: all .25s ease;
-}
 
 .hide{
   opacity: 0;
@@ -233,35 +239,35 @@ body {
 }
 .second__radio-block {
 }
-.second__input-block {
-  font-size: 1.8rem;
+.second-block__input-block {
+  font-size: 2.4rem;
   margin-bottom: 1rem;
 }
-.second__input-block label{
+.second-block__input-block label{
   cursor: pointer;
   transition: all .25s ease;
   position: relative;
 }
 
-.second__input-block input{
+.second-block__input-block input{
   width: 0px;
 
 }
-.second__input-block label:before, .second__input-block label:after{
+.second-block__input-block label:before, .second-block__input-block label:after{
   content: '';
   position: absolute;
   top: 50%;
   transform: translateY(-50%);
   border-radius: 50%;
 }
-.second__input-block label:before{
+.second-block__input-block label:before{
   width: 24px;
   height: 24px;
   border: 1px solid var(--btn-bgHover);
   left: -30px;
 }
 
-.second__input-block label:after{
+.second-block__input-block label:after{
   width: 16px;
   height: 0px;
   opacity: 0;
@@ -272,8 +278,46 @@ body {
   transition: all .25s ease;
 }
 
-.second__input-block input:checked + label:after{
+.second-block__input-block input:checked + label:after{
   opacity: 1;
   height: 16px;
   visibility: visible;
+}
+
+
+
+.landing-block {
+}
+.landing-block__title {
+}
+.title {
+}
+.landing-block__counter {
+}
+#counter-number{
+  text-align: center;
+  font-size: 3.2rem;
+  font-weight: 700;
+  max-width: 100px;
+  margin-left: 20px;
+  margin-right: 20px;
+  min-height: 60px;
+}
+.counter {
+}
+.counter__btn {
+  font-size: 3.2rem;
+  font-weight: 700;
+  background: var(--btn-bg);
+  color: var(--white);
+  border: none;
+  padding: 10px 20px;
+  cursor: pointer;
+  min-height: 60px;
+}
+
+input[type='number']::-webkit-inner-spin-button, 
+input[type='number']::-webkit-outer-spin-button { 
+    -webkit-appearance: none;
+    margin: 0;
 }
