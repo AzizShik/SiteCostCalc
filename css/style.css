@@ -99,6 +99,7 @@ section {
 /* RESET CSS */
 :root{
   --white: #ffffff;
+  --black: #000000;
   --bg: #000000e6;
   --btn-bg: #ff9900;
   --btn-bgHover: #b86f02;
@@ -120,6 +121,7 @@ body {
   margin: 0 auto;
 }
 .btn{
+  margin-top: 2rem;
   border: none;
   cursor: pointer;
   color: var(--white);
@@ -132,10 +134,25 @@ body {
 
   transition: all .25s ease;
 }
-.btn:hover{
-  background: var(--btn-bgHover);
-  border-radius: 20px;
+
+@media(hover: hover){
+  .btn:hover{
+    background: var(--btn-bgHover);
+    border-radius: 20px;
+  }
+
+  .btn:hover .next-span{
+    color: var(--black);
+  }
+  .main__link:hover:before{
+    width: 0;
+  }
+  .second__input-block label:hover{
+    color: var(--btn-bgHover);
+  }
 }
+
+
 .btn:active{
   transform: translate(1px, 1px) scale(0.96);
 }
@@ -146,10 +163,12 @@ body {
   border: 1px solid var(--white);
   padding: 40px;
   text-align: center;
+  border-radius: 4px;
+  box-shadow: 0px 6px 6px 6px rgba(255, 255, 255, 0.16), 0px 0px 1px rgba(255, 255, 255, 0.25);
 }
-
 .main__title {
   font-size: 2.4rem;
+  font-weight: 700;
   text-transform: uppercase;
   margin-bottom: 3rem;
 }
@@ -158,7 +177,6 @@ body {
   max-width: 720px;
   margin-bottom: 5rem;
 }
-
 .main__link {
   text-decoration: none;
   color: #fff;
@@ -175,10 +193,84 @@ body {
   display: block;
   transition: all .25s ease;
 }
-.main__link:hover:before{
-  width: 0;
-}
+
 .main__link svg{
   width: 24px;
   height: 24px;
+}
+
+.next-span{
+  font-size: 1.5rem;
+  transition: all .25s ease;
+}
+
+.hide{
+  opacity: 0;
+  visibility: hidden;
+  height: 0;
+}
+.show{
+  opacity: 1;
+  visibility: visible;
+  height: auto;
+}
+
+
+.first-block{
+  transition: all .25s ease;
+}
+
+
+.second-block {
+}
+.second__quest {
+  margin-bottom: 2rem;
+  margin-top: 2rem;
+  font-size: 2.4rem;
+}
+.second__radio-block {
+}
+.second__input-block {
+  font-size: 1.8rem;
+  margin-bottom: 1rem;
+}
+.second__input-block label{
+  cursor: pointer;
+  transition: all .25s ease;
+  position: relative;
+}
+
+.second__input-block input{
+  width: 0px;
+
+}
+.second__input-block label:before, .second__input-block label:after{
+  content: '';
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  border-radius: 50%;
+}
+.second__input-block label:before{
+  width: 24px;
+  height: 24px;
+  border: 1px solid var(--btn-bgHover);
+  left: -30px;
+}
+
+.second__input-block label:after{
+  width: 16px;
+  height: 0px;
+  opacity: 0;
+  visibility: hidden;
+  background: var(--btn-bg);
+  left: -25px;
+
+  transition: all .25s ease;
+}
+
+.second__input-block input:checked + label:after{
+  opacity: 1;
+  height: 16px;
+  visibility: visible;
 }
