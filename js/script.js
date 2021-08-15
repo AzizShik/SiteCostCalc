@@ -86,7 +86,7 @@ multipleBtn.addEventListener('click', () => {
   const multipleInput = document.querySelector('.multiple-block__input');
   const multipleNumberValue = multipleNumber.value;
   const multipleNmultipleInputumberValue = multipleInput.value;
-  const totalValue = (multipleNumberValue * ((multipleNmultipleInputumberValue - 500 ) / 1000 * 730 ));
+  const totalValue = (multipleNumberValue * ((multipleNmultipleInputumberValue - 100 ) / 1000 * 730 ));
   totalPrice.classList.add('show-price');
   totalPrice.innerHTML = `Цена: <span class='total-price-span'>${totalValue}р</span> `;
 });
