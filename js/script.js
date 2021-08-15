@@ -96,7 +96,7 @@ magazineBtn.addEventListener('click', () => {
   const magazineInput = document.querySelector('.magazine-block__input');
   const magazineNumberValue = magazineNumber.value;
   const magazineNmultipleInputumberValue = magazineInput.value;
-  const totalValue = (magazineNumberValue * ((magazineNmultipleInputumberValue - 500 ) / 1000 * 730 ));
+  const totalValue = (magazineNumberValue * ((magazineNmultipleInputumberValue - 100 ) / 1000 * 730 ));
   totalPrice.classList.add('show-price');
   totalPrice.innerHTML = `Цена: <span class='total-price-span'>${totalValue}р</span> `;
 });
