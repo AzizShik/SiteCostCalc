@@ -100,7 +100,7 @@ section {
 :root {
   --white: #ffffff;
   --black: #000000;
-  --bg: #000000e6;
+  --bg: #242424;
   --btn-bg: #ff9900;
   --btn-bgHover: #b86f02;
 }
@@ -289,34 +289,36 @@ body {
 }
 .title {
 }
-.landing-block__counter {
-}
-.counter-number {
-  display: inline-block;
-  text-align: center;
-  font-size: 3.2rem;
-  font-weight: 700;
-  max-width: 100px;
-  margin-left: 20px;
-  margin-right: 20px;
-  min-height: 60px;
 
+.landing-block__subtitle {
+  font-size: 2.4rem;
+  font-weight: 500;
+  margin-bottom: 25px;
   font-family: Roboto, sans-serif;
+
 }
-.counter {
-}
-.counter__btn {
-  display: inline-block;
-  font-size: 3.2rem;
+
+.counter-input{
+  max-width: 150px;
+  width: 100%;
+  min-height: 50px;
+  font-size: 2.4rem;
   font-weight: 700;
-  background: var(--btn-bg);
-  color: var(--white);
-  border: none;
-  padding: 10px 20px;
-  cursor: pointer;
-  min-height: 60px;
+  border-radius: 4px;
+  font-family: Roboto, sans-serif;
+  padding: 10px;
+}
+.counter-span {
+  font-size: 3.2rem;
+  text-transform: uppercase;
+  font-weight: 700;
+  margin-left: 5px;
+  color: var(--btn-bg);
+}
 
-
+.counter-number{
+  margin-left: -50px;
+  padding: 10px;
 }
 
 input[type="number"]::-webkit-inner-spin-button,
@@ -331,3 +333,28 @@ input[type="number"]::-webkit-outer-spin-button {
   bottom: 0;
   font-size: 3.6em;
 }
+
+
+.show-price{
+  animation: showPrice .25s ease forwards;
+}
+
+.total-price-span{
+  color: var(--btn-bg);
+  font-weight: 700;
+}
+
+@keyframes showPrice {
+  0%{
+    opacity: 0;
+    transform: translateX(100%);
+  }
+  100%{
+    opacity: 1;
+    transform: translateX(0%);
+  }
+}
+
+
+.multiple-block__number{}
+.multiple-block__input{}

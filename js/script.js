@@ -8,10 +8,9 @@ const firstBlock = document.querySelector('.first-block'),
   CounterInput = document.querySelectorAll('.counter-number'),
   inputRadios = document.querySelectorAll('.second-block__input-block input'),
   landingBtn = document.querySelector('.landing-btn'),
-  multipleBtn = document.querySelector('.multiple-bth'),
-  magazineBtn = document.querySelector('.magazine-bth'),
-  totalPrice = document.querySelector('.total-price'),
-  blockPrice = 700;
+  multipleBtn = document.querySelector('.multiple-btn'),
+  magazineBtn = document.querySelector('.magazine-btn'),
+  totalPrice = document.querySelector('.total-price');
 
 
 
@@ -77,7 +76,27 @@ CounterMinus.forEach(item => {
 landingBtn.addEventListener('click', () => {
   const landingInput = document.querySelector('.landing-number');
   const landingValue = landingInput.value;
-  const totalValue = landingValue * blockPrice;
-  totalPrice.innerHTML = `Цена: ${totalValue}р`;
+  const totalValue = landingValue / 1000 * 730;
+  totalPrice.classList.add('show-price');
+  totalPrice.innerHTML = `Цена: <span class='total-price-span'>${totalValue}р</span> `;
+});
 
+multipleBtn.addEventListener('click', () => {
+  const multipleNumber = document.querySelector('.multiple-block__number');
+  const multipleInput = document.querySelector('.multiple-block__input');
+  const multipleNumberValue = multipleNumber.value;
+  const multipleNmultipleInputumberValue = multipleInput.value;
+  const totalValue = (multipleNumberValue * ((multipleNmultipleInputumberValue - 500 ) / 1000 * 730 ));
+  totalPrice.classList.add('show-price');
+  totalPrice.innerHTML = `Цена: <span class='total-price-span'>${totalValue}р</span> `;
+});
+
+magazineBtn.addEventListener('click', () => {
+  const magazineNumber = document.querySelector('.magazine-block__number');
+  const magazineInput = document.querySelector('.magazine-block__input');
+  const magazineNumberValue = magazineNumber.value;
+  const magazineNmultipleInputumberValue = magazineInput.value;
+  const totalValue = (magazineNumberValue * ((magazineNmultipleInputumberValue - 500 ) / 1000 * 730 ));
+  totalPrice.classList.add('show-price');
+  totalPrice.innerHTML = `Цена: <span class='total-price-span'>${totalValue}р</span> `;
 });
